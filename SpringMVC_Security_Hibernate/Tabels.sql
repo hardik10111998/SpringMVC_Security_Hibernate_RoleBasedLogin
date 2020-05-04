@@ -1,7 +1,14 @@
 
 create table Authorities (id integer not null auto_increment, authority varchar(255), primary key (id));
 -------------------------------------------------------------------------------------------
-create table user_authority (USER_ID integer not null, AUTHORITY_ID integer not null, primary key (USER_ID, AUTHORITY_ID));
+CREATE TABLE `user` (
+  `userId` int NOT NULL AUTO_INCREMENT,
+  `password` varchar(255) DEFAULT NULL,
+  `userAddress` varchar(255) DEFAULT NULL,
+  `userEmail` varchar(255) DEFAULT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+);
 ------------------------------------------------------------------------------------------
 create table user_authority (USER_ID integer not null, AUTHORITY_ID integer not null, primary key (USER_ID, AUTHORITY_ID));
 -------------------------------------------------------------------------------------------
